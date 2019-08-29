@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://Cai-Yao.github.io">
   <title>暑期集训 算法学习一 | YaoYaoLe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[TOC] 二分图 定义： 重要的性质： 例题：  网络流 定义和术语：  重要的性质：   例题：  上下界可行流 定义 ：给定一张网络，在保证流量守恒的情况下使得每一条边的流量在$A_i-B_i$之间   解决方法 ：首先将每条边的流量设置为$A_i$，对于每一个点计算出入边的流量总和$X$和出边的流量总和$Y$，如果$X-Y&amp;gt;0$就将该点连向$S$,如果$X-Y&amp;lt;0$就将该点连向">
+  <meta name="description" content="[TOC] 二分图">
 <meta name="keywords" content="算法学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="暑期集训 算法学习一">
 <meta property="og:url" content="http://Cai-Yao.github.io/2019/08/07/test/index.html">
 <meta property="og:site_name" content="YaoYaoLe">
-<meta property="og:description" content="[TOC] 二分图 定义： 重要的性质： 例题：  网络流 定义和术语：  重要的性质：   例题：  上下界可行流 定义 ：给定一张网络，在保证流量守恒的情况下使得每一条边的流量在$A_i-B_i$之间   解决方法 ：首先将每条边的流量设置为$A_i$，对于每一个点计算出入边的流量总和$X$和出边的流量总和$Y$，如果$X-Y&amp;gt;0$就将该点连向$S$,如果$X-Y&amp;lt;0$就将该点连向">
+<meta property="og:description" content="[TOC] 二分图">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-16T13:07:13.172Z">
+<meta property="og:updated_time" content="2019-08-29T10:13:49.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="暑期集训 算法学习一">
-<meta name="twitter:description" content="[TOC] 二分图 定义： 重要的性质： 例题：  网络流 定义和术语：  重要的性质：   例题：  上下界可行流 定义 ：给定一张网络，在保证流量守恒的情况下使得每一条边的流量在$A_i-B_i$之间   解决方法 ：首先将每条边的流量设置为$A_i$，对于每一个点计算出入边的流量总和$X$和出边的流量总和$Y$，如果$X-Y&amp;gt;0$就将该点连向$S$,如果$X-Y&amp;lt;0$就将该点连向">
+<meta name="twitter:description" content="[TOC] 二分图">
   
     <link rel="alternative" href="/atom.xml" title="YaoYaoLe" type="application/atom+xml">
   
@@ -176,7 +176,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>[TOC]</p>
-<h2 id="二分图"><a href="#二分图" class="headerlink" title="二分图"></a>二分图</h2><ul>
+<h2 id="二分图"><a href="#二分图" class="headerlink" title="二分图"></a>二分图</h2><a id="more"></a>
+<ul>
 <li><strong>定义</strong>：</li>
 <li><strong>重要的性质</strong>：</li>
 <li><strong>例题</strong>：</li>
@@ -192,8 +193,7 @@
 <li><strong>定义</strong> ：给定一张网络，在保证流量守恒的情况下使得每一条边的流量在$A_i-B_i$之间</li>
 </ul>
 </li>
-<li><p><strong>解决方法</strong> ：首先将每条边的流量设置为$A_i$，对于每一个点计算出入边的流量总和$X$和出边的流量总和$Y$，如果$X-Y&gt;0$就将该点连向$S$,如果$X-Y&lt;0$就将该点连向$T$,流量为$X-Y$,然后在新得网络上求最大流，那么问题中的可行流就是新得网络对应边的流量加上$A_i$。（<strong><em>如果原来有源点汇点就先让汇点向源点连边</em></strong>$[0,inf]$ ）(<strong><em>源点和汇点不是$S$ 和 $T$</em></strong> )</p>
-</li>
+<li><strong>解决方法</strong> ：首先将每条边的流量设置为$A_i$，对于每一个点计算出入边的流量总和$X$和出边的流量总和$Y$，如果$X-Y&gt;0$就将该点连向$S$,如果$X-Y&lt;0$就将该点连向$T$,流量为$X-Y$,然后在新得网络上求最大流，那么问题中的可行流就是新得网络对应边的流量加上$A_i$。（<strong><em>如果原来有源点汇点就先让汇点向源点连边</em></strong>$[0,inf]$ ）(<strong><em>源点和汇点不是$S$ 和 $T$</em></strong> )</li>
 </ul>
 <h3 id="上下界最小流"><a href="#上下界最小流" class="headerlink" title="上下界最小流"></a>上下界最小流</h3><ul>
 <li><p><strong>定义</strong> ：在满足可行流的约束下，使得$S$到$T$的流量最小。</p>
@@ -591,5 +591,21 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!--script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
